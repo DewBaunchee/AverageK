@@ -19,7 +19,7 @@
                <Insets right="10.0" />
             </HBox.margin>
          </Button>
-         <TextField fx:id="kCount" prefHeight="26.0" prefWidth="37.0" promptText="K">
+         <TextField fx:id="ratio" prefHeight="26.0" prefWidth="70.0" promptText="Ratio">
             <HBox.margin>
                <Insets right="10.0" />
             </HBox.margin>

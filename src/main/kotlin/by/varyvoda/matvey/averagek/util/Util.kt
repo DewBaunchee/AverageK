@@ -12,6 +12,17 @@ fun getDistance(from: Point2D, to: Point2D): Double {
     return sqrt((to.x - from.x) * (to.x - from.x) + (to.y - from.y) * (to.y - from.y))
 }
 
+fun getAverageDistance(cores: List<Point2D>): Double {
+    var sumDistance = 0.0
+    for (i in cores.indices) {
+        for (j in cores.indices) {
+            if (i == j) continue
+            sumDistance += getDistance(cores[i], cores[j])
+        }
+    }
+    return sumDistance / cores.size
+}
+
 fun getExtremes(points: List<Point2D>): Extremes {
     var minX: Double = Double.POSITIVE_INFINITY
     var maxX: Double = Double.NEGATIVE_INFINITY
